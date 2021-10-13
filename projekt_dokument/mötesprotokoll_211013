@@ -1,0 +1,9 @@
+check-in möte 13/10
+Närvarande: Alla gruppmedlemmar
+
+Beslut:
+- Vi ska försöka hålla main.js filen så clean som möjligt och använda oss av modulfiler som exporterar funktioner och importeras i main.js.
+- Vi ska använda oss av globala variabler när vi laddar json filer för att undvika att ladda samma data flera gånger.
+
+Kommentarer:
+- Vi behöver kolla upp hur man skriver till json filer.
