@@ -46,6 +46,7 @@ body{
 }
 .kanbanColumn {
     background-color: #BCBCBC;
+    margin: 10px;
     width: 350px;
     height: auto;
     overflow:hidden;
