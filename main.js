@@ -22,6 +22,7 @@ const global = {
   doingBtn: document.getElementById('doingBtn'),
   testBtn: document.getElementById('testBtn'),
   doneBtn: document.getElementById('doneBtn'),
+  kanbanNewCardBtn: document.getElementById('kanbanNewCardBtn'),
   wrongCredentials: document.getElementById('wrongCredentials')
 }
 export { global };
