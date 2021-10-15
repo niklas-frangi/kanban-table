@@ -63,7 +63,17 @@ body{
     padding-bottom: 10px;
     display: none;   /* Lägg till ett kort-knapparna dold som standard */
 }
-footer{
+.kanbanCard {
+    padding-left: 25px;
+    padding-right: 25px;
+    margin: 10px;
+    word-wrap: break-word;
+    background-color: white;
+    width: 280px;
+    height: auto;
+    border-radius: 15px;
+}
+footer {
     margin-top: auto;
     text-align: center;
     font-size: 20px;
