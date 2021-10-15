@@ -13,7 +13,7 @@ const global = {
   passWord: document.getElementById('password'),
   loginBtn: document.getElementById('loginBtn'),
   logoutBtn: document.getElementById('logoutBtn'),
-  kanbanboardClass: document.getElementById('kanbanBoard'),
+  kanbanboardClass: document.querySelector('kanbanBoard'),
   kanbanboardTodo: document.getElementById('Todo'),
   kanbanboardDoing: document.getElementById('Doing'),
   kanbanboardTest: document.getElementById('Test'),
@@ -22,7 +22,7 @@ const global = {
   doingBtn: document.getElementById('doingBtn'),
   testBtn: document.getElementById('testBtn'),
   doneBtn: document.getElementById('doneBtn'),
-  kanbanNewCardBtn: document.getElementById('kanbanNewCardBtn'),
+  kanbanNewCardBtn: document.querySelector('kanbanNewCardBtn'),
   wrongCredentials: document.getElementById('wrongCredentials')
 }
 export { global };
