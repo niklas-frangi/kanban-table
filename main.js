@@ -32,3 +32,27 @@ let allCards = [];
 export { allCards };
 
 checkLoginStatus();
+
+
+addCurrentUser();
+
+function addCurrentUser(){
+  localStorage.setItem("currentUser", "niklas");
+  console.log(localStorage);
+}
+
+
+logOut();
+function logOut(){
+  localStorage.removeItem("currentUser");
+  console.log(localStorage);
+/*   global.kanbanboardClass.style.visibility = "hidden"; */
+/*   global.kanbanboardTodo.style.visibility = "hidden";
+  global.kanbanboardDoing.style.visibility = "hidden";
+  global.kanbanboardTest.style.visibility = "hidden";
+  global.kanbanboardDone.style.visibility = "hidden"; */
+/*   global.loginForm.style.visibility = "hidden" */
+  global.loginForm.style.visibility = "visible"
+/*   global.loginForm.style.display = "none" */
+/*   global.loginForm.style.display = "block" */
+}
