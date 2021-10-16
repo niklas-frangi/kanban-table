@@ -23,7 +23,7 @@ const global = {
   testBtn: document.getElementById('testBtn'),
   doneBtn: document.getElementById('doneBtn'),
   kanbanCard: document.querySelector('.kanbanCard'),
-  kanbanNewCardBtn: document.querySelector('.kanbanNewCardBtn'),
+  kanbanNewCardBtn: document.querySelectorAll('.kanbanNewCardBtn'),
   wrongCredentials: document.getElementById('wrongCredentials')
 }
 export { global };
@@ -32,4 +32,6 @@ export { global };
 let allCards = [];
 export { allCards };
 
+// Loggar in om användaren finns i LocalStorage.
+// Kör då loginTrue() som döljer div:ar och som i sin tur kör funktion printExistingCard() som skriver ut korten.
 checkLoginStatus();
