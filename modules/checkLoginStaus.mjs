@@ -1,6 +1,6 @@
 
 import { global } from '../main.js';
-import { printExistingCard } from '../printCards.mjs';
+import { printExistingCard } from './printCards.mjs';
 
 export function checkLoginStatus() {
 
