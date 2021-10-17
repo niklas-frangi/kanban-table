@@ -1,6 +1,6 @@
 //Placeholders för import av modulfiler (exempel nedan)
 import { checkLoginStatus } from './modules/checkLoginStaus.mjs';
-//import { funktionsnamn } from './modules/filnamn.mjs';
+import { loginFunction } from './modules/loginFunction.mjs';
 //import { funktionsnamn } from './modules/filnamn.mjs';
 //import { funktionsnamn } from './modules/filnamn.mjs';
 //import { funktionsnamn } from './modules/filnamn.mjs';
