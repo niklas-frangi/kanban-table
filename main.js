@@ -1,6 +1,6 @@
 //Placeholders för import av modulfiler (exempel nedan)
 import { checkLoginStatus } from './modules/checkLoginStaus.mjs';
-import { logout } from './modules/logout.mjs';
+import { loginFunction } from './modules/loginFunction.mjs';
 //import { funktionsnamn } from './modules/filnamn.mjs';
 //import { funktionsnamn } from './modules/filnamn.mjs';
 //import { funktionsnamn } from './modules/filnamn.mjs';
@@ -22,7 +22,8 @@ const global = {
   doingBtn: document.getElementById('doingBtn'),
   testBtn: document.getElementById('testBtn'),
   doneBtn: document.getElementById('doneBtn'),
-  kanbanNewCardBtn: document.querySelector('.kanbanNewCardBtn'),
+  kanbanCard: document.querySelector('.kanbanCard'),
+  kanbanNewCardBtn: document.querySelectorAll('.kanbanNewCardBtn'),
   wrongCredentials: document.getElementById('wrongCredentials')
 }
 export { global };
@@ -31,7 +32,6 @@ export { global };
 let allCards = [];
 export { allCards };
 
+// Loggar in om användaren finns i LocalStorage.
+// Kör då loginTrue() som döljer div:ar och som i sin tur kör funktion printExistingCard() som skriver ut korten.
 checkLoginStatus();
-
-logout();
-

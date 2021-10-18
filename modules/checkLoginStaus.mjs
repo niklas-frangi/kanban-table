@@ -1,3 +1,7 @@
+
+import { global } from '../main.js';
+import { printExistingCard } from './printCards.mjs';
+
 export function checkLoginStatus() {
 
     let localStorageCurrentUser = localStorage.getItem("currentUser");
@@ -10,10 +14,16 @@ export function checkLoginStatus() {
 
         for (let i = 0; i < filterUsername.length; ++i){
             if (localStorageCurrentUser === filterUsername[i]){
-                // loginTrue();
-                // printExistingCard();
+                loginTrue();
             }
         }
     }
     getData()
+}
+
+export function loginTrue() {
+    global.kanbanNewCardBtn.forEach(a=>a.style.display = 'inherit');
+    global.loginForm.style.display = "none";
+    global.logoutBtn.style.display = "inherit";
+    printExistingCard();
 }
