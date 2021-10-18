@@ -36,5 +36,5 @@ export { allCards };
 // Kör då loginTrue() som döljer div:ar och som i sin tur kör funktion printExistingCard() som skriver ut korten.
 checkLoginStatus();
 
-
+// Lägger till ett klickevent på knappen för utloggning som kör utloggningsfunktionen.
 global.logoutBtn.addEventListener("click", logout);
