@@ -49,6 +49,7 @@ body{
     margin: 10px;
     width: 350px;
     height: auto;
+    min-height: 30rem;
     overflow:hidden;
     border-radius: 15px;
 }
