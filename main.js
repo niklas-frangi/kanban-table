@@ -51,3 +51,6 @@ global.testBtn.addEventListener("click", function(){
 global.doneBtn.addEventListener("click", function(){
   newCard("Done");
 });
+
+// Event listener for login
+global.loginBtn.addEventListener("click", loginFunction);
