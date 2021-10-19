@@ -1,0 +1,11 @@
+Möte, fredagen den 15 okt, kl: 13-14.
+Närvarande: NiklasB, Robin, Gabriel och NiklasF.
+
+• Vi gör en egen funktion för inloggning som körs vid rätt uppgifter: loginTrue()
+Ligger i samma modul som automatisk inloggning. checkLoginStaus.mjs
+
+• Vi skrev ner några punkter på kortet "Funktionalitet för skapa nytt kort" som den funktionen behöver innehålla.
+
+• Robin skriver till nästa möte en lista på hur vi jobbar i GitHub (flow).
+
+Trevlig helg!
