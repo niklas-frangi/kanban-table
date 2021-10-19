@@ -54,10 +54,14 @@ body{
     height: auto;
     min-height: 10rem;
     overflow:hidden;
-    border-radius: 15px;
+    border-radius: 5px;
 }
 .kanbanColumn > h2 {
     padding-left: 25px;
+}
+#todoBtn{
+   bottom: 0px;
+   border: black solid 1px;
 }
 .kanbanNewCardBtn {
     all: unset;
@@ -69,28 +73,26 @@ body{
     display: none;   /* Lägg till ett kort-knapparna dold som standard */
 }
 .kanbanCard {
-    padding-left: 25px;
-    padding-right: 25px;
+    padding: 1rem;
     margin: 10px;
     word-wrap: break-word;
     background-color: white;
     width: auto;
     height: auto;
-    border-radius: 15px;
+    border-radius: 5px;
 }
 #removeCardBtn{
     background-color: #ff0000;
     color: white;
-    padding: 2px 32px;
-    margin: 8px;
+    padding: 0.3rem 0.4rem;
+    margin-top:  0.6rem;
     text-decoration: none;
     font-size: 12px;
 }
 #changeCardBtn{
     background-color: #226edd;
     color: white;
-    padding: 2px 32px;
-    margin: 8px;
+    padding: 0.3rem 0.4rem;
     text-decoration: none;
     font-size: 12px;
 }
