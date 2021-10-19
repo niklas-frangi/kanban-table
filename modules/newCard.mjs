@@ -43,6 +43,20 @@ export function newCard(status) {
     })
     card.appendChild(saveCardBtn);
 
-    global.kanbanboardTodo.appendChild(card); //Här ska den inte ligga!
+    //add new card to DOM
+    switch (status) {
+        case ("todo"):
+            global.kanbanboardTodo.appendChild(card);
+            break;
+        case ("doing"):
+            global.kanbanboardDoing.appendChild(card);
+            break;
+        case ("test"):
+            global.kanbanboardTest.appendChild(card);
+            break;
+        case ("done"):
+            global.kanbanboardDone.appendChild(card);
+            break;
+    }
 
 }
