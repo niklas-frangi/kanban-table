@@ -39,13 +39,13 @@ checkLoginStatus();
 
 // Test av LS innan alla moduler är klara
 let allCardsToLokSto = [
-  {cardId: 1, cardText: 'Donec ullamcorper nulla non metus auctor fringilla.', cardColumn: 'toDo!'},
-  {cardId: 2, cardText: 'Nullam quis risus eget urna mollis ornare vel eu leo.', cardColumn: 'doing'},
-  {cardId: 3, cardText: 'Maecenas faucibus mollis interdum.', cardColumn: 'test'},
-  {cardId: 4, cardText: 'Praesent commodo cursus magna, vel scelerisque nisl consectetur et.', cardColumn: 'done'}
+  {cardId: 1, cardText: 'Donec ullamcorper nulla non metus auctor fringilla.', cardColumn: 'Todo'},
+  {cardId: 2, cardText: 'Nullam quis risus eget urna mollis ornare vel eu leo.', cardColumn: 'Doing'},
+  {cardId: 3, cardText: 'Maecenas faucibus mollis interdum.', cardColumn: 'Test'},
+  {cardId: 4, cardText: 'Praesent commodo cursus magna, vel scelerisque nisl consectetur et.', cardColumn: 'Done'}
 ];
 
-localStorage.setItem('allCards', JSON.stringify(allCardsToLokSto));
+//localStorage.setItem('allCards', JSON.stringify(allCardsToLokSto));
 
 // Kör drag and drop funktionen.
 DragAndDrop();

@@ -2,10 +2,11 @@ import { global } from '../main.js'
 import { deleteCard } from './deleteCard.mjs'
 import { changecardText } from './changecardText.mjs'
 import { removeCards } from './removeCards.mjs'
+import { DragAndDrop } from './DragAndDrop.mjs';
 
 export function printExistingCard(){
     //Nollställer divarna (dvs raderar alla befintliga kort om något existerar) och skriver ut allt på nytt 
-    removeCards();
+    //**removeCards();
 
     //Tar ut alla korten från localStorage
     const storedCards = JSON.parse(localStorage.getItem('allCards'));
@@ -25,8 +26,6 @@ export function printExistingCard(){
         "<br><button id='removeCardBtn' onclick='deleteCard()'>Ta bort</button>   <button id='changeCardBtn' onclick='changecardText()'>Ändra kort</button>";
         newDiv.className = 'kanbanCard'
         newDiv.setAttribute('draggable', true);
-        newDiv.setAttribute('ondragstart','drag(event)');
-        newDiv.setAttribute('ondragover','denyDrop(event)');
         global.kanbanboardTodo.appendChild(newDiv);
       });
       Object.values(listallDoingCards).forEach(card => {
@@ -36,8 +35,6 @@ export function printExistingCard(){
         "<br><button id='removeCardBtn' onclick='deleteCard()'>Ta bort</button>   <button id='changeCardBtn' onclick='changecardText()'>Ändra kort</button>";
         newDiv.className = 'kanbanCard'
         newDiv.setAttribute('draggable', true);
-        newDiv.setAttribute('ondragstart','drag(event)');
-        newDiv.setAttribute('ondragover','denyDrop(event)');
         global.kanbanboardDoing.appendChild(newDiv);
       });
       Object.values(listallTestCards).forEach(card => {
@@ -47,8 +44,6 @@ export function printExistingCard(){
         "<br><button id='removeCardBtn' onclick='deleteCard()''>Ta bort</button>   <button id='changeCardBtn' onclick='changecardText()'>Ändra kort</button>";
         newDiv.className = 'kanbanCard'
         newDiv.setAttribute('draggable', true);
-        newDiv.setAttribute('ondragstart','drag(event)');
-        newDiv.setAttribute('ondragover','denyDrop(event)');
         global.kanbanboardTest.appendChild(newDiv);
       });
       Object.values(listallDoneCards).forEach(card => {
@@ -58,10 +53,9 @@ export function printExistingCard(){
         "<br><button id='removeCardBtn' onclick='deleteCard()''>Ta bort</button>   <button id='changeCardBtn' onclick='changecardText()'>Ändra kort</button>";
         newDiv.className = 'kanbanCard'
         newDiv.setAttribute('draggable', true);
-        newDiv.setAttribute('ondragstart','drag(event)');
-        newDiv.setAttribute('ondragover','denyDrop(event)');
         global.kanbanboardDone.appendChild(newDiv);
-      });    
+      });
+    DragAndDrop()    
 }
 /*Lösning av bugg med onClick-event på knappar. Allt som definieras i en modul omfattas av den modulen, 
 så det kommer inte att vara tillgängligt för inline JS; en snabb och 'dirty' lösning skulle vara 
