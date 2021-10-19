@@ -23,30 +23,30 @@
         </form>
     </header>
 <div class="kanbanBoard">
-    <div id="toDoColumn" class="kanbanColumn" ondrop="drop(event)" ondragover="allowDrop(event)">
-        <h2 ondragover="denyDrop(event)" >Todo</h2>
-        <div id="1" class="kanbanCard toDo" draggable="true" ondragstart="drag(event)" ondragover="denyDrop(event)">
+    <div id="toDoColumn" class="kanbanColumn">
+        <h2 class="noDrop" >Todo</h2>
+        <div id="1" class="kanbanCard toDo" draggable="true">
             Donec ullamcorper nulla non metus auctor fringilla.
         </div>
         <button id="todoBtn" class="kanbanNewCardBtn"> + Lägg till ett kort</button>       
     </div>
-    <div id="doingColumn" class="kanbanColumn" ondrop="drop(event)" ondragover="allowDrop(event)">
-        <h2 ondragover="denyDrop(event)">Doing</h2>
-        <div id="2" class="kanbanCard doing" draggable="true" ondragstart="drag(event)" ondragover="denyDrop(event)">
+    <div id="doingColumn" class="kanbanColumn">
+        <h2 class="noDrop" >Doing</h2>
+        <div id="2" class="kanbanCard doing" draggable="true">
             Nullam quis risus eget urna mollis ornare vel eu leo.
         </div>
         <button id="doingBtn" class="kanbanNewCardBtn"> + Lägg till ett kort</button>           
     </div>
-    <div id="testColumn" class="kanbanColumn" ondrop="drop(event)" ondragover="allowDrop(event)">
-        <h2 ondragover="denyDrop(event)">Test</h2>
-        <div id="3" class="kanbanCard test" draggable="true" ondragstart="drag(event)" ondragover="denyDrop(event)">
+    <div id="testColumn" class="kanbanColumn">
+        <h2 class="noDrop" >Test</h2>
+        <div id="3" class="kanbanCard test" draggable="true">
             Maecenas faucibus mollis interdum.
         </div>
         <button id="testBtn" class="kanbanNewCardBtn"> + Lägg till ett kort</button>           
     </div>
-    <div id="doneColumn" class="kanbanColumn" ondrop="drop(event)" ondragover="allowDrop(event)">
-        <h2 ondragover="denyDrop(event)">Done</h2>
-        <div id="4" class="kanbanCard done" draggable="true" ondragstart="drag(event)" ondragover="denyDrop(event)">
+    <div id="doneColumn" class="kanbanColumn">
+        <h2 class="noDrop" >Done</h2>
+        <div id="4" class="kanbanCard done" draggable="true">
             Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
         </div>
         <button id="doneBtn" class="kanbanNewCardBtn"> + Lägg till ett kort</button>           

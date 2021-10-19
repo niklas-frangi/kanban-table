@@ -4,7 +4,7 @@ import { checkLoginStatus } from './modules/checkLoginStaus.mjs';
 import { loginFunction } from './modules/loginFunction.mjs';
 import { logout } from './modules/logout.mjs';
 import { removeCards } from './modules/removeCards.mjs';
-//import { funktionsnamn } from './modules/filnamn.mjs';
+import { DragAndDrop } from './modules/DragAndDrop.mjs';
 //import { funktionsnamn } from './modules/filnamn.mjs';
 
 // Global
@@ -42,9 +42,12 @@ let allCardsToLokSto = [
   {cardId: 1, cardText: 'Donec ullamcorper nulla non metus auctor fringilla.', cardColumn: 'toDo!'},
   {cardId: 2, cardText: 'Nullam quis risus eget urna mollis ornare vel eu leo.', cardColumn: 'doing'},
   {cardId: 3, cardText: 'Maecenas faucibus mollis interdum.', cardColumn: 'test'},
-  {cardId: 4, cardText: 'Nullam quis risus eget urna mollis ornare vel eu leo.', cardColumn: 'done'}
+  {cardId: 4, cardText: 'Praesent commodo cursus magna, vel scelerisque nisl consectetur et.', cardColumn: 'done'}
 ];
 
 localStorage.setItem('allCards', JSON.stringify(allCardsToLokSto));
+
+// Kör drag and drop funktionen.
+DragAndDrop();
 
 global.logoutBtn.addEventListener("click", logout);
