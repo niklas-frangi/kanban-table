@@ -10,6 +10,10 @@ export function printExistingCard() {
   //Tar ut alla korten från localStorage
   const storedCards = JSON.parse(localStorage.getItem('allCards'));
 
+  if (storedCards === undefined) { return undefined;} // return undefined for undefined 
+  if (storedCards === null) { return null;} // null unchanged
+
+
   //Filtrerar korten baserat på vilken kolumnstatus dessa har.
   const listallTodoCards = Object.values(storedCards).filter(card => card.cardColumn === 'Todo');
   const listallDoingCards = Object.values(storedCards).filter(card => card.cardColumn === 'Doing');
