@@ -50,4 +50,5 @@ localStorage.setItem('allCards', JSON.stringify(allCardsToLokSto));
 // Kör drag and drop funktionen.
 DragAndDrop();
 
+// Lägger till ett klickevent på knappen för utloggning som kör utloggningsfunktionen.
 global.logoutBtn.addEventListener("click", logout);
