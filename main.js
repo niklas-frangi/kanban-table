@@ -5,6 +5,9 @@ import { logout } from './modules/logout.mjs';
 import { removeCards } from './modules/removeCards.mjs';
 import { newCard } from './modules/newCard.mjs';
 
+//localStorage start stage (empty)
+localStorage.setItem('allCards', '1');
+
 // Global
 const global = {
   loginForm: document.getElementById('loginform'),
