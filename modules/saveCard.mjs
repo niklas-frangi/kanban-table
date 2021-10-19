@@ -1,6 +1,4 @@
-
-
-//import { printExistingCard } from '/printCards.mjs'
+import { printExistingCard } from './printCards.mjs'
 
 export function saveCard(cardStatus, cardText) {
 
@@ -20,5 +18,8 @@ export function saveCard(cardStatus, cardText) {
     cardObject = {"cardId": cardId, "cardText": cardText, "cardColumn": cardStatus};
     pullAllCards.push(cardObject);    
     localStorage.setItem("allCards", JSON.stringify(pullAllCards));
+
+    //Print cards to DOM
+    printExistingCard();
   
 }

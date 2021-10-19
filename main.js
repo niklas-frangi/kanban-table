@@ -40,14 +40,14 @@ global.logoutBtn.addEventListener("click", logout);
 
 // Event listener for new card buttons
 global.todoBtn.addEventListener("click", function() {
-  newCard("todo");
+  newCard("Todo");
 });
 global.doingBtn.addEventListener("click", function() {
-  newCard("doing");
+  newCard("Doing");
 });
 global.testBtn.addEventListener("click", function(){
-  newCard("test");
+  newCard("Test");
 });
 global.doneBtn.addEventListener("click", function(){
-  newCard("done");
+  newCard("Done");
 });
