@@ -66,6 +66,5 @@ export function DragAndDrop() {
     let selectedCardIndex = allCardsParse.findIndex(a => a.cardId === parameterCardID);
     allCardsParse[selectedCardIndex].cardColumn = column;
     localStorage.setItem('allCards', JSON.stringify(allCardsParse));
-  }
-  
+  } 
 }
