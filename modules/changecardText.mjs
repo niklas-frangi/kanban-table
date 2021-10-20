@@ -17,7 +17,7 @@ export function changecardText(parameterCardID) {
 
         let body = document.querySelector("body");
         console.log(body);
-        body.insertAdjacentHTML('afterbegin', `<div id="popUpBox"><textarea type="text" id="changeText">${activeText}</textarea><button id="saveBtn">Spara</button></div>`);
+        body.insertAdjacentHTML('afterbegin', `<div id='popUpContainer'><div id="popUpBox"><textarea type="text" id="changeText">${activeText}</textarea><button id="saveBtn">Spara</button></div></div>`);
         let saveButton = document.getElementById('saveBtn');
         let changeText = document.getElementById('changeText');
         saveButton.addEventListener('click', function () {
@@ -26,7 +26,7 @@ export function changecardText(parameterCardID) {
             localStorageCard[selectedCard].cardText = changeText.value;
             console.log(localStorageCard)
             localStorage.setItem('allCards', JSON.stringify(localStorageCard));
-            let removeObject = document.getElementById('popUpBox');
+            let removeObject = document.getElementById('popUpContainer');
             console.log(removeObject)
             removeObject.remove();
             printExistingCard();
