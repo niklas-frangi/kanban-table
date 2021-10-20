@@ -38,11 +38,7 @@ header>h1 {
     /* logout-knapp dold som standard */
 }
 
-#wrongCredentials {
-    color: rgb(255, 0, 0);
-    display: none;
-    /* Felmeddelandet för felaktiga inloggningsuppgifter dold som standard */
-}
+
 
 body {
     min-height: 98vh;
