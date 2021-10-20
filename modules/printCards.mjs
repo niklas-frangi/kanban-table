@@ -2,7 +2,7 @@ import { global } from '../main.js'
 import { deleteCard } from './deleteCard.mjs'
 import { changecardText } from './changecardText.mjs'
 import { removeCards } from './removeCards.mjs'
-import { DragAndDrop } from './DragAndDrop.mjs';
+import { DragAndDrop } from './dragAndDrop.mjs';
 
 export function printExistingCard() {
   //Nollställer divarna (dvs raderar alla befintliga kort om något existerar) och skriver ut allt på nytt 
@@ -27,7 +27,7 @@ export function printExistingCard() {
     var newDiv = document.createElement("div");
     newDiv.id = card.cardId
     newDiv.innerHTML = card.cardText +
-      "<br><button id='removeCardBtn' onclick='deleteCard()'>Ta bort</button>   <button id='changeCardBtn' onclick='changecardText()'>Ändra kort</button>";
+      "<br><button id='removeCardBtn' onclick='deleteCard()'>Ta bort</button>   <button id='changeCardBtn' onclick='changecardText("+ card.cardId  +")'>Ändra kort</button>";
     newDiv.className = 'kanbanCard'
 
     //show card id on card
@@ -43,7 +43,7 @@ export function printExistingCard() {
     var newDiv = document.createElement("div");
     newDiv.id = card.cardId
     newDiv.innerHTML = card.cardText +
-      "<br><button id='removeCardBtn' onclick='deleteCard()'>Ta bort</button>   <button id='changeCardBtn' onclick='changecardText()'>Ändra kort</button>";
+      "<br><button id='removeCardBtn' onclick='deleteCard()'>Ta bort</button>   <button id='changeCardBtn' onclick='changecardText("+ card.cardId  +")'>Ändra kort</button>";
     newDiv.className = 'kanbanCard'
 
     //show card id on card
@@ -59,7 +59,7 @@ export function printExistingCard() {
     var newDiv = document.createElement("div");
     newDiv.id = card.cardId
     newDiv.innerHTML = card.cardText +
-      "<br><button id='removeCardBtn' onclick='deleteCard()''>Ta bort</button>   <button id='changeCardBtn' onclick='changecardText()'>Ändra kort</button>";
+      "<br><button id='removeCardBtn' onclick='deleteCard()''>Ta bort</button>   <button id='changeCardBtn' onclick='changecardText("+ card.cardId  +")'>Ändra kort</button>";
     newDiv.className = 'kanbanCard'
 
     //show card id on card
@@ -75,7 +75,7 @@ export function printExistingCard() {
     var newDiv = document.createElement("div");
     newDiv.id = card.cardId
     newDiv.innerHTML = card.cardText +
-      "<br><button id='removeCardBtn' onclick='deleteCard()''>Ta bort</button>   <button id='changeCardBtn' onclick='changecardText()'>Ändra kort</button>";
+      "<br><button id='removeCardBtn' onclick='deleteCard()''>Ta bort</button>   <button id='changeCardBtn' onclick='changecardText("+ card.cardId  +")'>Ändra kort</button>";
     newDiv.className = 'kanbanCard'
 
     //show card id on card
