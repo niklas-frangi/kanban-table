@@ -19,6 +19,10 @@ export function deleteCard() {
         // Uppdaterar localStorage genom att ta bort hela allCards och sedan lägga till en ny allCards med columnvärdet ändrat till "archived".
         localStorage.removeItem("allCards");
         localStorage.setItem('allCards', JSON.stringify(parsed));
+
+        for (var i = 0; i < elements.length; i++) {
+            elements[i].removeEventListener('click', myFunction, false);
+        }
     };
 
     for (var i = 0; i < elements.length; i++) {
