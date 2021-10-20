@@ -5,6 +5,7 @@ export function loginFunction() {
     var getUser = document.getElementById("username").value;
     var getPass = document.getElementById("password").value;
 
+
     fetch("inloggningsuppgifter.json")
 
         .then(function (response) {

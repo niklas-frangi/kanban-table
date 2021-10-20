@@ -1,12 +1,40 @@
-export function changecardText(){
-    var elements = document.getElementsByClassName("kanbanCard");
+import { printExistingCard } from './printCards.mjs';
 
-var myFunction = function() {
-    //skrivit ut som placeholder för att underlätta för Nermin (för att fånga aktuellt element)
-    console.log(this)
-};
+export function changecardText(parameterCardID) {
+    
 
-for (var i = 0; i < elements.length; i++) {
-    elements[i].addEventListener('click', myFunction, false);
+    let localStorageCard = JSON.parse(localStorage.getItem('allCards'));
+    let selectedCard = localStorageCard.findIndex(a => a.cardId === parameterCardID);
+    let activeText = localStorageCard[selectedCard].cardText;
+    
+
+
+
+    function popUp() {
+
+        let body = document.querySelector("body");
+        body.insertAdjacentHTML('afterbegin', `<div id='popUpContainer'><div id="popUpBox"><textarea type="text" id="changeText">${activeText}</textarea><button id="saveBtn">Spara</button></div></div>`);
+        let saveButton = document.getElementById('saveBtn');
+        let changeText = document.getElementById('changeText');
+        saveButton.addEventListener('click', function () {
+
+            localStorageCard[selectedCard].cardText = changeText.value;
+            localStorage.setItem('allCards', JSON.stringify(localStorageCard));
+            let removeObject = document.getElementById('popUpContainer');
+            removeObject.remove();
+            printExistingCard();
+        });
+
+
+
+    };
+    popUp();
+
+
+
+
+
 }
-}
+
+
+

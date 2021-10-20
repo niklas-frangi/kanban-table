@@ -6,6 +6,7 @@ import { removeCards } from './modules/removeCards.mjs';
 import { DragAndDrop } from './modules/dragAndDrop.mjs';
 //import { funktionsnamn } from './modules/filnamn.mjs';
 import { newCard } from './modules/newCard.mjs';
+import { changecardText } from './modules/changecardText.mjs';
 
 // Global
 const global = {
@@ -36,6 +37,8 @@ export { allCards };
 // Loggar in om användaren finns i LocalStorage.
 // Kör då loginTrue() som döljer div:ar och som i sin tur kör funktion printExistingCard() som skriver ut korten.
 checkLoginStatus();
+
+
 
 // Kör drag and drop funktionen.
 DragAndDrop();

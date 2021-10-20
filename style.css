@@ -4,16 +4,20 @@
 header {
     background-color: black;
 }
-header > h1 {
+
+header>h1 {
     color: white;
     padding-left: 60px;
 }
-#loginform{
+
+#loginform {
     float: right;
 }
-#logoutBtn{
+
+#logoutBtn {
     float: right;
 }
+
 #loginBtn {
     background-color: #226EDD;
     color: white;
@@ -22,6 +26,7 @@ header > h1 {
     text-decoration: none;
     font-size: 16px;
 }
+
 #logoutBtn {
     background-color: #FF6700;
     color: white;
@@ -29,17 +34,22 @@ header > h1 {
     text-align: center;
     text-decoration: none;
     font-size: 16px;
-    display: none;   /* logout-knapp dold som standard */
+    display: none;
+    /* logout-knapp dold som standard */
 }
+
 #wrongCredentials {
     color: rgb(255, 0, 0);
-    display: none;   /* Felmeddelandet för felaktiga inloggningsuppgifter dold som standard */
+    display: none;
+    /* Felmeddelandet för felaktiga inloggningsuppgifter dold som standard */
 }
-body{
+
+body {
     min-height: 98vh;
     display: flex;
     flex-direction: column;
 }
+
 .kanbanBoard {
     padding-top: 35px;
     display: flex;
@@ -47,6 +57,7 @@ body{
     align-items:flex-start;
     justify-content: center;
 }
+
 .kanbanColumn {
     background-color: #BCBCBC;
     margin: 10px;
@@ -56,9 +67,11 @@ body{
     overflow:hidden;
     border-radius: 5px;
 }
-.kanbanColumn > h2 {
+
+.kanbanColumn>h2 {
     padding-left: 25px;
 }
+
 .kanbanNewCardBtn {
     all: unset;
     color: black;
@@ -66,8 +79,10 @@ body{
     cursor: pointer;
     padding-left: 25px;
     padding-bottom: 10px;
-    display: none;   /* Lägg till ett kort-knapparna dold som standard */
+    display: none;
+    /* Lägg till ett kort-knapparna dold som standard */
 }
+
 .kanbanCard {
     padding: 1rem;
     margin: 10px;
@@ -77,7 +92,8 @@ body{
     height: auto;
     border-radius: 5px;
 }
-#removeCardBtn{
+
+#removeCardBtn {
     background-color: #ff0000;
     color: white;
     padding: 0.3rem 0.4rem;
@@ -85,7 +101,8 @@ body{
     text-decoration: none;
     font-size: 12px;
 }
-#changeCardBtn{
+
+#changeCardBtn {
     background-color: #226edd;
     color: white;
     padding: 0.3rem 0.4rem;
@@ -137,15 +154,76 @@ footer {
     text-align: center;
     font-size: 20px;
 }
+
+#popUpBox {
+    padding: 1rem;
+    background-color: rgb(98, 98, 98);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    border: 1rem;
+    border-radius: 2px;
+    margin: 40%;
+
+}
+
+#changeText {
+    background-color: #f4f4f4;
+    margin: auto;
+    padding: 5%;
+    min-width: 90%;
+    min-height: 150px;
+    size: auto;
+    border-radius: 10px;
+    
+}
+
+#saveBtn {
+    border-radius: 5px;
+    background-color: #226edd;
+    color: white;
+    width: 100px;
+    margin-top: 15px;
+}
+
+#popUpContainer {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    left: 0;
+    top: 0;
+    position: fixed;
+    z-index: 1;
+    padding-top: 5px;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    border: 15px solid grey;
+    flex-direction: inherit;
+}
+
 @media only screen and (max-width: 600px) {
-    header > h1 {
+    header>h1 {
         font-size: 20px;
         text-align: center;
     }
-    #loginform{
+
+    #loginform {
         text-align: center;
     }
+
     .kanbanBoard {
         flex-direction: column;
     }
 }
+
+
+/* width: 200px;
+height: 200px;
+background-color: white;
+border: grey; */
