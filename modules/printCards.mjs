@@ -2,6 +2,7 @@ import { global } from '../main.js'
 import { deleteCard } from './deleteCard.mjs'
 import { changecardText } from './changecardText.mjs'
 import { removeCards } from './removeCards.mjs'
+import { DragAndDrop } from './DragAndDrop.mjs';
 
 export function printExistingCard() {
   //Nollställer divarna (dvs raderar alla befintliga kort om något existerar) och skriver ut allt på nytt 
@@ -21,7 +22,7 @@ export function printExistingCard() {
   const listallDoneCards = Object.values(storedCards).filter(card => card.cardColumn === 'Done');
 
   /*forEach för att skriva ut alla korten och lägg till knapparna Ta bort och Ändra kort.
-  Sätter attribut draggable="true" ondragstart="drag(event)" ondragover="denyDrop(event) för drag n drop på korten.*/
+  Sätter attribut draggable="true" för drag n drop på korten.*/
   Object.values(listallTodoCards).forEach(card => {
     var newDiv = document.createElement("div");
     newDiv.id = card.cardId
@@ -36,8 +37,6 @@ export function printExistingCard() {
     newDiv.insertAdjacentElement('afterbegin', cardNumber);
 
     newDiv.setAttribute('draggable', true);
-    newDiv.setAttribute('ondragstart', 'drag(event)');
-    newDiv.setAttribute('ondragover', 'denyDrop(event)');
     global.kanbanboardTodo.appendChild(newDiv);
   });
   Object.values(listallDoingCards).forEach(card => {
@@ -54,8 +53,6 @@ export function printExistingCard() {
     newDiv.insertAdjacentElement('afterbegin', cardNumber);
 
     newDiv.setAttribute('draggable', true);
-    newDiv.setAttribute('ondragstart', 'drag(event)');
-    newDiv.setAttribute('ondragover', 'denyDrop(event)');
     global.kanbanboardDoing.appendChild(newDiv);
   });
   Object.values(listallTestCards).forEach(card => {
@@ -72,8 +69,6 @@ export function printExistingCard() {
     newDiv.insertAdjacentElement('afterbegin', cardNumber);
 
     newDiv.setAttribute('draggable', true);
-    newDiv.setAttribute('ondragstart', 'drag(event)');
-    newDiv.setAttribute('ondragover', 'denyDrop(event)');
     global.kanbanboardTest.appendChild(newDiv);
   });
   Object.values(listallDoneCards).forEach(card => {
@@ -88,12 +83,11 @@ export function printExistingCard() {
     cardNumber.setAttribute("class", "cardNumber");
     cardNumber.innerText = "#" + card.cardId;
     newDiv.insertAdjacentElement('afterbegin', cardNumber);
-
+    
     newDiv.setAttribute('draggable', true);
-    newDiv.setAttribute('ondragstart', 'drag(event)');
-    newDiv.setAttribute('ondragover', 'denyDrop(event)');
     global.kanbanboardDone.appendChild(newDiv);
   });
+  DragAndDrop()
 }
 /*Lösning av bugg med onClick-event på knappar. Allt som definieras i en modul omfattas av den modulen, 
 så det kommer inte att vara tillgängligt för inline JS; en snabb och 'dirty' lösning skulle vara 

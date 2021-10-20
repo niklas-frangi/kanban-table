@@ -3,6 +3,8 @@ import { checkLoginStatus } from './modules/checkLoginStaus.mjs';
 import { loginFunction } from './modules/loginFunction.mjs';
 import { logout } from './modules/logout.mjs';
 import { removeCards } from './modules/removeCards.mjs';
+import { DragAndDrop } from './modules/DragAndDrop.mjs';
+//import { funktionsnamn } from './modules/filnamn.mjs';
 import { newCard } from './modules/newCard.mjs';
 
 // Global
@@ -34,6 +36,9 @@ export { allCards };
 // Loggar in om användaren finns i LocalStorage.
 // Kör då loginTrue() som döljer div:ar och som i sin tur kör funktion printExistingCard() som skriver ut korten.
 checkLoginStatus();
+
+// Kör drag and drop funktionen.
+DragAndDrop();
 
 // Lägger till ett klickevent på knappen för utloggning som kör utloggningsfunktionen.
 global.logoutBtn.addEventListener("click", logout);
