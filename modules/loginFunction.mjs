@@ -1,11 +1,11 @@
 import { loginTrue } from './checkLoginStaus.mjs';
-import { global } from '../main.js';
+
 
 export function loginFunction() {
     var getUser = document.getElementById("username").value;
     var getPass = document.getElementById("password").value;
 
-
+    
     fetch("inloggningsuppgifter.json")
 
         .then(function (response) {
@@ -18,8 +18,12 @@ export function loginFunction() {
                     localStorage.setItem("currentUser", getUser);
                     loginTrue();
                 }
-                else {
-                        global.wrongCredentials.style.display= "block";
+                else if (data.username !== getUser && data.password !== getPass){
+                    alert('Felaktigt användarnamn eller lösenord');
+                    for (let i = 0; i < array.length; i++) {
+                        if (array[i] === 2) 
+                          continue;
+                      }
                 }
             })
         })
