@@ -95,6 +95,7 @@ body {
     width: auto;
     height: auto;
     border-radius: 5px;
+    cursor: move;
 }
 
 #removeCardBtn {
@@ -227,9 +228,3 @@ footer {
         flex-direction: column;
     }
 }
-
-
-/* width: 200px;
-height: 200px;
-background-color: white;
-border: grey; */
