@@ -26,7 +26,7 @@ const global = {
   doneBtn: document.getElementById('doneBtn'),
   kanbanCard: document.querySelector('.kanbanCard'),
   kanbanNewCardBtn: document.querySelectorAll('.kanbanNewCardBtn'),
-  wrongCredentials: document.getElementById('wrongCredentials')
+
 }
 export { global };
 
