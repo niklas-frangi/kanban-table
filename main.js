@@ -1,10 +1,12 @@
-//Placeholders för import av modulfiler (exempel nedan)
+//Import modules
 import { checkLoginStatus } from './modules/checkLoginStaus.mjs';
 import { loginFunction } from './modules/loginFunction.mjs';
 import { logout } from './modules/logout.mjs';
 import { removeCards } from './modules/removeCards.mjs';
-import { changecardText } from './modules/changecardText.mjs';
+import { DragAndDrop } from './modules/DragAndDrop.mjs';
 //import { funktionsnamn } from './modules/filnamn.mjs';
+import { newCard } from './modules/newCard.mjs';
+import { changecardText } from './modules/changecardText.mjs';
 
 // Global
 const global = {
@@ -38,5 +40,25 @@ checkLoginStatus();
 changecardText(1);
 
 
+// Kör drag and drop funktionen.
+DragAndDrop();
 
+// Lägger till ett klickevent på knappen för utloggning som kör utloggningsfunktionen.
 global.logoutBtn.addEventListener("click", logout);
+
+// Event listener for new card buttons
+global.todoBtn.addEventListener("click", function() {
+  newCard("Todo");
+});
+global.doingBtn.addEventListener("click", function() {
+  newCard("Doing");
+});
+global.testBtn.addEventListener("click", function(){
+  newCard("Test");
+});
+global.doneBtn.addEventListener("click", function(){
+  newCard("Done");
+});
+
+// Event listener for login
+global.loginBtn.addEventListener("click", loginFunction);

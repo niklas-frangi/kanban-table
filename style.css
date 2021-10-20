@@ -1,3 +1,6 @@
+* {
+    font-family: sans-serif;
+}
 header {
     background-color: black;
 }
@@ -51,7 +54,7 @@ body {
     padding-top: 35px;
     display: flex;
     column-gap: 25px;
-    align-items: center;
+    align-items:flex-start;
     justify-content: center;
 }
 
@@ -60,8 +63,9 @@ body {
     margin: 10px;
     width: 350px;
     height: auto;
-    overflow: hidden;
-    border-radius: 15px;
+    min-height: 10rem;
+    overflow:hidden;
+    border-radius: 5px;
 }
 
 .kanbanColumn>h2 {
@@ -80,21 +84,20 @@ body {
 }
 
 .kanbanCard {
-    padding-left: 25px;
-    padding-right: 25px;
+    padding: 1rem;
     margin: 10px;
     word-wrap: break-word;
     background-color: white;
-    width: 280px;
+    width: auto;
     height: auto;
-    border-radius: 15px;
+    border-radius: 5px;
 }
 
 #removeCardBtn {
     background-color: #ff0000;
     color: white;
-    padding: 2px 32px;
-    margin: 8px;
+    padding: 0.3rem 0.4rem;
+    margin-top:  0.6rem;
     text-decoration: none;
     font-size: 12px;
 }
@@ -102,12 +105,50 @@ body {
 #changeCardBtn {
     background-color: #226edd;
     color: white;
+    padding: 0.3rem 0.4rem;
+    text-decoration: none;
+    font-size: 12px;
+}
+#saveCardBtn{
+    background-color: #226edd;
+    color: white;
     padding: 2px 32px;
     margin: 8px;
     text-decoration: none;
     font-size: 12px;
 }
-
+textarea {
+    border-radius: 5px;
+    max-width: max-content;
+    min-width: 100%;
+    margin-top: 10px;
+}
+.savedText {
+    border: 1px solid grey;
+    border-radius: 7px;
+    padding: 7px;
+    background-color: white;
+}
+.cardNumber {
+    /* border: 1px dotted pink; */
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 2px;
+}
+.discardButton{
+    border-radius: 10px;
+    border: none;
+    background-color: white;
+    font-size: larger;
+    font-family: monospace;
+    margin-top: 10px;
+}
+.discardButtonContainer {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    align-items: flex-start;
+}
 footer {
     margin-top: auto;
     text-align: center;
