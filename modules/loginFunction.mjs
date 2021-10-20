@@ -2,9 +2,12 @@ export function loginFunction(){
 
 var loginButton = document.getElementById("loginBtn");
 
+
+
 loginButton.addEventListener("click", function(){
     var getUser = document.getElementById("username").value;
     var getPass = document.getElementById("password").value;
+
 
     fetch("inloggningsuppgifter.json")
 

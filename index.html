@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,11 +9,12 @@
     <script type="module" src="main.js" defer></script>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
         <h1>Kanban Meta 3</h1>
         <form id="loginform">
-            <input type="text" id="username" placeholder="Användarnamn"/>
+            <input type="text" id="username" placeholder="Användarnamn" />
             <input type="password" id="password" placeholder="Lösenord">
             <button id="loginBtn">Logga in</button>
             <div id="wrongCredentials">Felaktigt användarnamn eller lösenord</div>
@@ -21,26 +23,30 @@
             <button id="logoutBtn">Logga ut</button>
         </form>
     </header>
-<div class="kanbanBoard">
-    <div id="Todo" class="kanbanColumn">
-        <h2>Todo</h2>
-        <button id="todoBtn" class="kanbanNewCardBtn"> + Lägg till ett kort</button>       
-    </div>
-    <div id="Doing" class="kanbanColumn">
-        <h2>Doing</h2>
-        <button id="doingBtn" class="kanbanNewCardBtn"> + Lägg till ett kort</button>           
-    </div>
-    <div id="Test" class="kanbanColumn">
-        <h2>Test</h2>
-        <button id="testBtn" class="kanbanNewCardBtn"> + Lägg till ett kort</button>           
-    </div>
-    <div id="Done" class="kanbanColumn">
-        <h2>Done</h2>
-        <button id="doneBtn" class="kanbanNewCardBtn"> + Lägg till ett kort</button>           
-    </div>
-</div>  
-<footer>
-    ©2021 Kanban Meta 3 - WU21    
-</footer>  
+        
+        <div class="kanbanBoard">
+            <div id="Todo" class="kanbanColumn">
+                <h2>Todo</h2>
+                <button id="todoBtn" class="kanbanNewCardBtn"> + Lägg till ett kort</button>
+            </div>
+            <div id="Doing" class="kanbanColumn">
+                <h2>Doing</h2>
+                <button id="doingBtn" class="kanbanNewCardBtn"> + Lägg till ett kort</button>
+            </div>
+            <div id="Test" class="kanbanColumn">
+                <h2>Test</h2>
+                <button id="testBtn" class="kanbanNewCardBtn"> + Lägg till ett kort</button>
+            </div>
+            <div id="Done" class="kanbanColumn">
+                <h2>Done</h2>
+                <button id="doneBtn" class="kanbanNewCardBtn"> + Lägg till ett kort</button>
+            </div>
+        </div>
+
+    
+        <footer>
+            ©2021 Kanban Meta 3 - WU21
+        </footer>
 </body>
+
 </html>

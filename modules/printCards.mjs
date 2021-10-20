@@ -3,8 +3,10 @@ import { deleteCard } from './deleteCard.mjs'
 import { changecardText } from './changecardText.mjs'
 import { removeCards } from './removeCards.mjs'
 
+
 export function printExistingCard(){
     //Nollställer divarna (dvs raderar alla befintliga kort om något existerar) och skriver ut allt på nytt 
+    
     removeCards();
 
     //Tar ut alla korten från localStorage
@@ -22,7 +24,7 @@ export function printExistingCard(){
         var newDiv = document.createElement("div");
         newDiv.id = card.cardId
         newDiv.innerHTML = card.cardText +
-        "<br><button id='removeCardBtn' onclick='deleteCard()'>Ta bort</button>   <button id='changeCardBtn' onclick='changecardText()'>Ändra kort</button>";
+        "<br><button id='removeCardBtn' onclick='deleteCard()'>Ta bort</button>   <button id='changeCardBtn' onclick='changecardText("+ card.cardId  +")'>Ändra kort</button>";
         newDiv.className = 'kanbanCard'
         newDiv.setAttribute('draggable', true);
         newDiv.setAttribute('ondragstart','drag(event)');
@@ -33,7 +35,7 @@ export function printExistingCard(){
         var newDiv = document.createElement("div");
         newDiv.id = card.cardId
         newDiv.innerHTML = card.cardText +
-        "<br><button id='removeCardBtn' onclick='deleteCard()'>Ta bort</button>   <button id='changeCardBtn' onclick='changecardText()'>Ändra kort</button>";
+        "<br><button id='removeCardBtn' onclick='deleteCard()'>Ta bort</button>   <button id='changeCardBtn' onclick='changecardText("+ card.cardId  +")'>Ändra kort</button>";
         newDiv.className = 'kanbanCard'
         newDiv.setAttribute('draggable', true);
         newDiv.setAttribute('ondragstart','drag(event)');
@@ -44,7 +46,7 @@ export function printExistingCard(){
         var newDiv = document.createElement("div");
         newDiv.id = card.cardId
         newDiv.innerHTML = card.cardText +
-        "<br><button id='removeCardBtn' onclick='deleteCard()''>Ta bort</button>   <button id='changeCardBtn' onclick='changecardText()'>Ändra kort</button>";
+        "<br><button id='removeCardBtn' onclick='deleteCard()''>Ta bort</button>   <button id='changeCardBtn' onclick='changecardText("+ card.cardId  +")'>Ändra kort</button>";
         newDiv.className = 'kanbanCard'
         newDiv.setAttribute('draggable', true);
         newDiv.setAttribute('ondragstart','drag(event)');
@@ -55,7 +57,7 @@ export function printExistingCard(){
         var newDiv = document.createElement("div");
         newDiv.id = card.cardId
         newDiv.innerHTML = card.cardText +
-        "<br><button id='removeCardBtn' onclick='deleteCard()''>Ta bort</button>   <button id='changeCardBtn' onclick='changecardText()'>Ändra kort</button>";
+        "<br><button id='removeCardBtn' onclick='deleteCard()''>Ta bort</button>   <button id='changeCardBtn' onclick='changecardText("+ card.cardId  +")'>Ändra kort</button>";
         newDiv.className = 'kanbanCard'
         newDiv.setAttribute('draggable', true);
         newDiv.setAttribute('ondragstart','drag(event)');
