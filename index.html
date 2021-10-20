@@ -22,24 +22,32 @@
         </form>
     </header>
 <div class="kanbanBoard">
-    <div id="Todo" class="kanbanColumn">
-        <h2 class="noDrop" >Todo</h2>
+    <div id="outerTodo" class="noDrop outerKanbanColumn">
+        <h2>Todo</h2>
+        <div id="Todo"class="kanbanColumn">
         <!-- Här läggs Todo-korten in -->
+        </div>
         <button id="todoBtn" class="kanbanNewCardBtn"> + Lägg till ett kort</button>       
     </div>
-    <div id="Doing" class="kanbanColumn">
-        <h2 class="noDrop" >Doing</h2>
-        <!-- Här läggs Doing-korten in -->
+    <div id="outerDoing" class="noDrop outerKanbanColumn">
+        <h2>Doing</h2>
+        <div id="Doing"class="kanbanColumn">
+            <!-- Här läggs Doing-korten in -->
+        </div>
         <button id="doingBtn" class="kanbanNewCardBtn"> + Lägg till ett kort</button>           
     </div>
-    <div id="Test" class="kanbanColumn">
-        <h2 class="noDrop" >Test</h2>
-        <!-- Här läggs Test-korten in -->
+    <div id="outerTest" class="noDrop outerKanbanColumn">
+        <h2>Test</h2>
+        <div id="Test"class="kanbanColumn">
+            <!-- Här läggs Test-korten in -->
+        </div>
         <button id="testBtn" class="kanbanNewCardBtn"> + Lägg till ett kort</button>           
     </div>
-    <div id="Done" class="kanbanColumn">
-        <h2 class="noDrop" >Done</h2>
-        <!-- Här läggs Done-korten in -->
+    <div id="outerDone" class="noDrop outerKanbanColumn">
+        <h2>Done</h2>
+        <div id="Done"class="kanbanColumn">
+            <!-- Här läggs Done-korten in -->
+        </div>
         <button id="doneBtn" class="kanbanNewCardBtn"> + Lägg till ett kort</button>           
     </div>
 </div>  
