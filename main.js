@@ -3,7 +3,7 @@ import { checkLoginStatus } from './modules/checkLoginStaus.mjs';
 import { loginFunction } from './modules/loginFunction.mjs';
 import { logout } from './modules/logout.mjs';
 import { removeCards } from './modules/removeCards.mjs';
-import { DragAndDrop } from './modules/DragAndDrop.mjs';
+import { DragAndDrop } from './modules/dragAndDrop.mjs';
 //import { funktionsnamn } from './modules/filnamn.mjs';
 import { newCard } from './modules/newCard.mjs';
 
