@@ -45,16 +45,16 @@ export function newCard(status) {
 
     //add new card to DOM
     switch (status) {
-        case ("todo"):
+        case ("Todo"):
             global.kanbanboardTodo.appendChild(card);
             break;
-        case ("doing"):
+        case ("Doing"):
             global.kanbanboardDoing.appendChild(card);
             break;
-        case ("test"):
+        case ("Test"):
             global.kanbanboardTest.appendChild(card);
             break;
-        case ("done"):
+        case ("Done"):
             global.kanbanboardDone.appendChild(card);
             break;
     }

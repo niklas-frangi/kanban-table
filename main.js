@@ -37,16 +37,6 @@ export { allCards };
 // Kör då loginTrue() som döljer div:ar och som i sin tur kör funktion printExistingCard() som skriver ut korten.
 checkLoginStatus();
 
-// Test av LS innan alla moduler är klara
-let allCardsToLokSto = [
-  {cardId: 1, cardText: 'Donec ullamcorper nulla non metus auctor fringilla.', cardColumn: 'Todo'},
-  {cardId: 2, cardText: 'Nullam quis risus eget urna mollis ornare vel eu leo.', cardColumn: 'Doing'},
-  {cardId: 3, cardText: 'Maecenas faucibus mollis interdum.', cardColumn: 'Test'},
-  {cardId: 4, cardText: 'Praesent commodo cursus magna, vel scelerisque nisl consectetur et.', cardColumn: 'Done'}
-];
-
-//localStorage.setItem('allCards', JSON.stringify(allCardsToLokSto));
-
 // Kör drag and drop funktionen.
 DragAndDrop();
 
@@ -55,14 +45,14 @@ global.logoutBtn.addEventListener("click", logout);
 
 // Event listener for new card buttons
 global.todoBtn.addEventListener("click", function() {
-  newCard("todo");
+  newCard("Todo");
 });
 global.doingBtn.addEventListener("click", function() {
-  newCard("doing");
+  newCard("Doing");
 });
 global.testBtn.addEventListener("click", function(){
-  newCard("test");
+  newCard("Test");
 });
 global.doneBtn.addEventListener("click", function(){
-  newCard("done");
+  newCard("Done");
 });

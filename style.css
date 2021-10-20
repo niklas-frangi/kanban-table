@@ -59,10 +59,6 @@ body{
 .kanbanColumn > h2 {
     padding-left: 25px;
 }
-#todoBtn{
-   bottom: 0px;
-   border: black solid 1px;
-}
 .kanbanNewCardBtn {
     all: unset;
     color: black;
