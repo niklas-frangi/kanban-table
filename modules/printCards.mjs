@@ -2,7 +2,7 @@ import { global } from '../main.js'
 import { deleteCard } from './deleteCard.mjs'
 import { changecardText } from './changecardText.mjs'
 import { removeCards } from './removeCards.mjs'
-import { DragAndDrop } from './DragAndDrop.mjs';
+import { DragAndDrop } from './dragAndDrop.mjs';
 
 export function printExistingCard() {
   //Nollställer divarna (dvs raderar alla befintliga kort om något existerar) och skriver ut allt på nytt 
