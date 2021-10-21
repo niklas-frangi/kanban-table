@@ -24,6 +24,8 @@ export function checkLoginStatus() {
 export function loginTrue() {
     global.kanbanNewCardBtn.forEach(a=>a.style.display = 'inherit');
     global.loginForm.style.display = "none";
-    global.logoutBtn.style.display = "inherit";
+    global.logoutForm.style.display = "inherit";
+    let currentUser = localStorage.getItem('currentUser')
+    global.logoutForm.insertAdjacentHTML('afterbegin', '<span id="loggedInAs">Du är inloggad som:&nbsp</span><span id="loggedInAsName">'+currentUser+'</span>');
     printExistingCard();
 }

@@ -15,6 +15,7 @@ const global = {
   passWord: document.getElementById('password'),
   loginBtn: document.getElementById('loginBtn'),
   logoutBtn: document.getElementById('logoutBtn'),
+  logoutForm: document.getElementById('logoutForm'),
   kanbanboardClass: document.querySelector('.kanbanBoard'),
   kanbanboardTodo: document.getElementById('Todo'),
   kanbanboardDoing: document.getElementById('Doing'),
