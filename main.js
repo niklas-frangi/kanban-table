@@ -1,12 +1,12 @@
 //Import modules
 import { checkLoginStatus } from './modules/checkLoginStaus.mjs';
-import { loginFunction } from './modules/loginFunction.mjs';
+import { checkUserAndAddToLocalStorade } from './modules/loginFunction.mjs';
 import { logout } from './modules/logout.mjs';
-import { removeCards } from './modules/removeCards.mjs';
+//import { removeCards } from './modules/removeCards.mjs';
 import { DragAndDrop } from './modules/dragAndDrop.mjs';
 //import { funktionsnamn } from './modules/filnamn.mjs';
 import { newCard } from './modules/newCard.mjs';
-import { changecardText } from './modules/changecardText.mjs';
+//import { changecardText } from './modules/changecardText.mjs';
 
 // Global
 const global = {
@@ -26,8 +26,9 @@ const global = {
   doneBtn: document.getElementById('doneBtn'),
   kanbanCard: document.querySelector('.kanbanCard'),
   kanbanNewCardBtn: document.querySelectorAll('.kanbanNewCardBtn'),
-
+  wrongCredentials: document.getElementById('wrongCredentials')
 }
+
 export { global };
 
 // Cards cointainer
@@ -61,4 +62,6 @@ global.doneBtn.addEventListener("click", function(){
 });
 
 // Event listener for login
-global.loginBtn.addEventListener("click", loginFunction);
+global.loginBtn.addEventListener("click", function(){ // Lyssnar efter "klick" på knappen Logga in. Vid klick kör den funktionen. 
+  checkUserAndAddToLocalStorade();
+});

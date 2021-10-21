@@ -1,30 +1,27 @@
 import { loginTrue } from './checkLoginStaus.mjs';
+import { global } from '../main.js';
 
+    export const checkUserAndAddToLocalStorade = () =>{
 
-export function loginFunction() {
-    var getUser = document.getElementById("username").value;
-    var getPass = document.getElementById("password").value;
+        let user = global.userName.value;
+        let password = global.passWord.value;
 
-    
-    fetch("inloggningsuppgifter.json")
+        const getData = async () => {
+            const response = await fetch ("inloggningsuppgifter.json");
+            const users = await response.json();
 
-        .then(function (response) {
-            return response.json();
-        })
-        .then(function (json) {
-            let newarray = json;
-            newarray.forEach((data) => {
-                if (data.username === getUser && data.password === getPass) {
-                    localStorage.setItem("currentUser", getUser);
-                    loginTrue();
+            for (let i = 0; i < users.length; ++i){
+                if (user === users[i].username && password === users[i].password){
+                    localStorage.setItem("currentUser", users[i].username);
                 }
-                else if (data.username !== getUser && data.password !== getPass){
-                    alert('Felaktigt användarnamn eller lösenord');
-                    for (let i = 0; i < array.length; i++) {
-                        if (array[i] === 2) 
-                          continue;
-                      }
-                }
-            })
-        })
-};
+            }
+
+            if (localStorage.getItem("currentUser") != null){
+                loginTrue()
+              }
+                else
+                    global.wrongCredentials.style.display= "inherit";
+            
+        }
+        getData()
+    }
